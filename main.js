@@ -21,6 +21,11 @@ function drawLine(x1, y1, x2, y2) {
 }
 
 if (isTouchDevice) {
+  // 禁止移动端下拉刷新
+  document.addEventListener("touchmove", e => {
+    e.preventDefault();
+  }, { passive: false })
+
   canvas.ontouchstart = (e) => {
     let touch = e.touches[0]
     lastCoordinate = [touch.clientX, touch.clientY]
