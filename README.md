@@ -1,4 +1,4 @@
-# drawing-board‘
+# drawing-board
 本地预览方法
 ```bash
 yarn global add http-server
